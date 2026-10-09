@@ -1,0 +1,102 @@
+.allocations-page {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.loading,
+.error {
+  margin: 24px 0;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+}
+
+.summary-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-value {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.summary-subtext {
+  font-size: 13px;
+  color: #666;
+}
+
+.card-primary mat-icon {
+  color: #3f51b5;
+}
+
+.card-accent mat-icon {
+  color: #ff4081;
+}
+
+.card-warn mat-icon {
+  color: #f44336;
+}
+
+.charts-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.chart-card {
+  min-height: 360px;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 320px;
+}
+
+.table-card,
+.risk-card {
+  margin-bottom: 20px;
+}
+
+.allocations-table {
+  width: 100%;
+}
+
+.negative {
+  color: #d32f2f;
+}
+
+mat-card-header {
+  margin-bottom: 16px;
+}

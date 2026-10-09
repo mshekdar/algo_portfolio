@@ -1,0 +1,159 @@
+<div class="allocations-page">
+  <h1>{{ allocation?.portfolio_name || 'Portfolio Allocation' }}</h1>
+
+  <div *ngIf="loading" class="loading">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
+
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+
+  <ng-container *ngIf="!loading && !error && allocation">
+    <div class="summary-grid">
+      <mat-card
+        *ngFor="let card of summaryCards"
+        class="summary-card"
+        [class]="'card-' + card.color"
+      >
+        <mat-card-content>
+          <div class="summary-header">
+            <mat-icon>{{ card.icon }}</mat-icon>
+            <span class="summary-label">{{ card.label }}</span>
+          </div>
+          <div class="summary-value">{{ card.value }}</div>
+          <div class="summary-subtext">{{ card.subtext }}</div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="charts-row">
+      <mat-card class="chart-card">
+        <mat-card-content>
+          <div class="chart-wrapper">
+            <canvas
+              baseChart
+              [data]="allocationChartData"
+              [options]="allocationChartOptions"
+              type="doughnut"
+            ></canvas>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="chart-card">
+        <mat-card-content>
+          <div class="chart-wrapper">
+            <canvas
+              baseChart
+              [data]="categoryChartData"
+              [options]="categoryChartOptions"
+              type="doughnut"
+            ></canvas>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <mat-card class="table-card">
+      <mat-card-header>
+        <mat-card-title>Allocated Strategies</mat-card-title>
+        <mat-card-subtitle
+          >{{ allocation.strategies.length }} strategies ·
+          {{ allocation.total_lots_across_strategies }} lots</mat-card-subtitle
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <table mat-table [dataSource]="dataSource" matSort class="allocations-table">
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Strategy</th>
+            <td mat-cell *matCellDef="let row">
+              <strong>{{ row.name }}</strong>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>
+            <td mat-cell *matCellDef="let row">
+              <mat-chip-set>
+                <mat-chip [color]="row.category.includes('Selling') ? 'accent' : 'primary'" [highlighted]="true">
+                  {{ row.category }}
+                </mat-chip>
+              </mat-chip-set>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="instrument">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Instrument</th>
+            <td mat-cell *matCellDef="let row">{{ row.instrument }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="lots">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Lots</th>
+            <td mat-cell *matCellDef="let row">{{ row.lots }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="capitalPerLot">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Capital / Lot</th>
+            <td mat-cell *matCellDef="let row">
+              {{ row.capitalPerLot | currency:'INR':'symbol':'1.0-0' }}
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="allocatedCapital">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Allocated</th>
+            <td mat-cell *matCellDef="let row">
+              {{ row.allocatedCapital | currency:'INR':'symbol':'1.0-0' }}
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="allocationPercent">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>% of Total</th>
+            <td mat-cell *matCellDef="let row">{{ row.allocationPercent | number:'1.2-2' }}%</td>
+          </ng-container>
+
+          <ng-container matColumnDef="grossReturn">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Gross Return</th>
+            <td mat-cell *matCellDef="let row">{{ row.grossReturn | number:'1.2-2' }}%</td>
+          </ng-container>
+
+          <ng-container matColumnDef="maxDrawdown">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Max DD</th>
+            <td mat-cell *matCellDef="let row" class="negative">
+              {{ row.maxDrawdown | number:'1.2-2' }}%
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="winRate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Win Rate</th>
+            <td mat-cell *matCellDef="let row">{{ row.winRate | number:'1.2-2' }}%</td>
+          </ng-container>
+
+          <ng-container matColumnDef="riskLevel">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Risk</th>
+            <td mat-cell *matCellDef="let row">{{ row.riskLevel }}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="risk-card">
+      <mat-card-header>
+        <mat-card-title>Risk Notes</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let note of allocation.risk_notes; let i = index" [expanded]="i === 0">
+            <mat-expansion-panel-header>
+              <mat-panel-title>Note {{ i + 1 }}</mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>{{ note }}</p>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
