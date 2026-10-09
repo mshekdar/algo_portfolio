@@ -1,0 +1,78 @@
+<mat-toolbar color="primary" class="app-toolbar">
+  <span class="brand"><mat-icon>shuffle</mat-icon> Portfolio Rebalancer</span>
+</mat-toolbar>
+
+<div class="container" *ngIf="!loading; else loadingTpl">
+  <!-- ==== Input Section ==== -->
+  <mat-card class="input-card">
+    <mat-card-title>Simulation Parameters</mat-card-title>
+    <mat-card-content>
+      <div class="grid">
+        <mat-form-field appearance="fill">
+          <mat-label>Total Capital (₹)</mat-label>
+          <input matInput type="number" [(ngModel)]="totalCapital" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Cash Reserve %</mat-label>
+          <input matInput type="number" [(ngModel)]="cashReservePct" min="0" max="100" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Option Buying %</mat-label>
+          <input matInput type="number" [(ngModel)]="optionBuyingPct" min="0" max="100" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Option Selling %</mat-label>
+          <input matInput type="number" [(ngModel)]="optionSellingPct" min="0" max="100" />
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" (click)="onRebalance()">Re‑balance</button>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- ==== Strategy Allocation Table ==== -->
+  <mat-card class="table-card">
+    <mat-card-title>Per‑Strategy Allocation % (of deployed capital)</mat-card-title>
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z2">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+        <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+      </ng-container>
+      <ng-container matColumnDef="allocationPct">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Allocation %</th>
+        <td mat-cell *matCellDef="let row">
+          <input matInput type="number" [(ngModel)]="row.allocationPct" style="width: 60px" min="0" max="100" />
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </mat-card>
+
+  <!-- ==== Summary Cards ==== -->
+  <div class="summary-grid">
+    <mat-card *ngFor="let card of summaryCards">
+      <mat-card-header>
+        <mat-icon mat-card-avatar [color]="card.color">{{ card.icon }}</mat-icon>
+        <mat-card-title>{{ card.label }}</mat-card-title>
+        <mat-card-subtitle>{{ card.subtext }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content><h2>{{ card.value }}</h2></mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- ==== Charts ==== -->
+  <div class="charts">
+    <div class="chart-wrapper">
+      <canvas baseChart [data]="allocationChartData" [options]="allocationChartOptions" chartType="doughnut"></canvas>
+    </div>
+    <div class="chart-wrapper">
+      <canvas baseChart [data]="categoryChartData" [options]="categoryChartOptions" chartType="pie"></canvas>
+    </div>
+  </div>
+</div>
+
+<ng-template #loadingTpl>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>
+
+<mat-error *ngIf="error">{{ error }}</mat-error>

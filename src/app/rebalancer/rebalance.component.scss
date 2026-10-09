@@ -1,0 +1,40 @@
+/* Re‑balancer component styling – largely mirrors allocations component */
+.container {
+  padding: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.table-card {
+  margin-top: 2rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.chart-wrapper {
+  flex: 1 1 300px;
+  height: 300px;
+}
+
+mat-toolbar.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
