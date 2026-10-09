@@ -29,19 +29,25 @@
     </mat-card-content>
   </mat-card>
 
-  <!-- ==== Strategy Allocation Table ==== -->
+  <!-- ==== Strategy Allocation Table (read‑only) ==== -->
   <mat-card class="table-card">
-    <mat-card-title>Per‑Strategy Allocation % (of deployed capital)</mat-card-title>
+    <mat-card-title>Strategy Allocation Details</mat-card-title>
     <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z2">
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
         <td mat-cell *matCellDef="let row">{{ row.name }}</td>
       </ng-container>
-      <ng-container matColumnDef="allocationPct">
+      <ng-container matColumnDef="lots">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Lots</th>
+        <td mat-cell *matCellDef="let row">{{ row.lots }}</td>
+      </ng-container>
+      <ng-container matColumnDef="allocatedCapital">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Allocated Capital (₹)</th>
+        <td mat-cell *matCellDef="let row">{{ row.allocatedCapital | number:'1.0-0' }}</td>
+      </ng-container>
+      <ng-container matColumnDef="allocationPercent">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Allocation %</th>
-        <td mat-cell *matCellDef="let row">
-          <input matInput type="number" [(ngModel)]="row.allocationPct" style="width: 60px" min="0" max="100" />
-        </td>
+        <td mat-cell *matCellDef="let row">{{ row.allocationPercent | number:'1.2-2' }}%</td>
       </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>

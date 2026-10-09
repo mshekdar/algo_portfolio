@@ -23,14 +23,6 @@ describe('RebalanceService', () => {
       cashReservePct: baseAlloc.cash_reserve_percent,
       optionBuyingPct: baseAlloc.option_buying_percent_of_total,
       optionSellingPct: baseAlloc.option_selling_percent_of_total,
-      strategyAllocPct: baseAlloc.strategies.reduce((acc, it) => {
-        const deployed =
-          baseAlloc.allocated_to_option_buying_inr +
-          baseAlloc.allocated_to_option_selling_inr;
-        const pct = deployed ? (it.allocated_capital_inr / deployed) * 100 : 0;
-        acc[it.strategy_info.name] = pct;
-        return acc;
-      }, {} as Record<string, number>),
     };
 
     const result = service.rebalance(baseAlloc, input);
@@ -48,11 +40,6 @@ describe('RebalanceService', () => {
       cashReservePct: 10,
       optionBuyingPct: 45,
       optionSellingPct: 45,
-      strategyAllocPct: {
-        // Allocate 60% to the first strategy and 40% to the second; others 0.
-        [baseAlloc.strategies[0].strategy_info.name]: 60,
-        [baseAlloc.strategies[1].strategy_info.name]: 40,
-      },
     };
 
     const result = service.rebalance(baseAlloc, input);
@@ -61,15 +48,21 @@ describe('RebalanceService', () => {
     expect(result.allocation.cash_reserve_inr).toBeCloseTo(5_000_000);
     // Deployed capital should be 90% of total
     expect(result.allocation.total_strategy_allocation_inr).toBeCloseTo(45_000_000);
-    // The two selected strategies should receive capital proportional to 60/40 of deployed
+    // Expected allocations should follow the original strategy ratios
+    const originalDeployed =
+      baseAlloc.allocated_to_option_buying_inr + baseAlloc.allocated_to_option_selling_inr;
+    const ratioFirst = baseAlloc.strategies[0].allocated_capital_inr / originalDeployed;
+    const ratioSecond = baseAlloc.strategies[1].allocated_capital_inr / originalDeployed;
+    const expectedFirst = ratioFirst * 45_000_000; // deployedCapital = 45M
+    const expectedSecond = ratioSecond * 45_000_000;
     const first = result.allocation.strategies.find(
       (s) => s.strategy_info.name === baseAlloc.strategies[0].strategy_info.name
     )!;
     const second = result.allocation.strategies.find(
       (s) => s.strategy_info.name === baseAlloc.strategies[1].strategy_info.name
     )!;
-    expect(first.allocated_capital_inr).toBeCloseTo(45_000_000 * 0.6);
-    expect(second.allocated_capital_inr).toBeCloseTo(45_000_000 * 0.4);
+    expect(first.allocated_capital_inr).toBeCloseTo(expectedFirst);
+    expect(second.allocated_capital_inr).toBeCloseTo(expectedSecond);
   });
 
   it('should throw when top‑level percentages do not sum to 100', () => {
@@ -78,7 +71,6 @@ describe('RebalanceService', () => {
       cashReservePct: 30,
       optionBuyingPct: 30,
       optionSellingPct: 30, // sums to 90
-      strategyAllocPct: { Test: 100 },
     };
     expect(() => service.rebalance(baseAlloc, input)).toThrowError();
   });

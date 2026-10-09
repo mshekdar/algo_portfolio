@@ -26,9 +26,12 @@ import { PortfolioAllocation, Strategy } from '../models';
 
 Chart.register(DoughnutController, ArcElement, Tooltip, Legend, Title);
 
-interface StrategyRow {
+// No per‑strategy input needed – rows are derived from the allocation result.
+interface AllocationRow {
   name: string;
-  allocationPct: number;
+  lots: number;
+  allocatedCapital: number;
+  allocationPercent: number;
 }
 
 @Component({
@@ -68,11 +71,9 @@ export class RebalanceComponent implements OnInit, AfterViewInit {
   cashReservePct = 0;
   optionBuyingPct = 0;
   optionSellingPct = 0;
-
-  // ----- Table for per‑strategy percentages -----
-  strategyRows: StrategyRow[] = [];
-  displayedColumns: string[] = ['name', 'allocationPct'];
-  dataSource = new MatTableDataSource<StrategyRow>([]);
+// ----- Table displaying derived allocation rows (read‑only) -----
+  displayedColumns: string[] = ['name', 'lots', 'allocatedCapital', 'allocationPercent'];
+  dataSource = new MatTableDataSource<any>([]);
 
   @ViewChild(MatSort) sort!: MatSort;
 
@@ -151,16 +152,18 @@ export class RebalanceComponent implements OnInit, AfterViewInit {
     this.optionBuyingPct = alloc.option_buying_percent_of_total;
     this.optionSellingPct = alloc.option_selling_percent_of_total;
 
-    // Build strategy rows based on the *deployed* capital portion
-    const deployed =
-      alloc.allocated_to_option_buying_inr + alloc.allocated_to_option_selling_inr;
-    this.strategyRows = alloc.strategies.map((it) => ({
-      name: it.strategy_info.name,
-      allocationPct: deployed
-        ? (it.allocated_capital_inr / deployed) * 100
-        : 0,
+    // Build rows for display (lots, allocated capital, percentage)
+    this.buildRowsFromAllocation(alloc);
+  }
+
+  private buildRowsFromAllocation(alloc: PortfolioAllocation): void {
+    const rows = alloc.strategies.map((item) => ({
+      name: item.strategy_info.name,
+      lots: item.number_of_lots,
+      allocatedCapital: item.allocated_capital_inr,
+      allocationPercent: item.allocation_percent_of_total,
     }));
-    this.dataSource.data = this.strategyRows;
+    this.dataSource.data = rows;
   }
 
   private loadStrategies(): void {
@@ -174,10 +177,6 @@ export class RebalanceComponent implements OnInit, AfterViewInit {
       cashReservePct: this.cashReservePct,
       optionBuyingPct: this.optionBuyingPct,
       optionSellingPct: this.optionSellingPct,
-      strategyAllocPct: this.strategyRows.reduce((acc, row) => {
-        acc[row.name] = row.allocationPct;
-        return acc;
-      }, {} as Record<string, number>),
     };
 
     try {
@@ -188,6 +187,7 @@ export class RebalanceComponent implements OnInit, AfterViewInit {
       // Refresh UI helpers
       this.buildSummaryCards();
       this.buildCharts();
+      this.buildRowsFromAllocation(this.allocation);
     } catch (e: any) {
       this.error = e.message;
     }

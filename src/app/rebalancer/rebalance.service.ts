@@ -16,8 +16,6 @@ export interface RebalanceInput {
   optionBuyingPct: number;
   /** Option‑selling allocation percentage of total capital (0‑100) */
   optionSellingPct: number;
-  /** Per‑strategy allocation percentages of the *deployed* (buy+sell) capital */
-  strategyAllocPct: Record<string, number>;
 }
 
 /** Result of a re‑balance operation. */
@@ -63,25 +61,16 @@ export class RebalanceService {
     const deployedCapital = optionBuying + optionSelling;
     const deployedPct = Number(((deployedCapital / input.totalCapital) * 100).toFixed(2));
 
-    // ----- Validate per‑strategy allocation -----
-    const strategyPctSum = Object.values(input.strategyAllocPct).reduce(
-      (a, b) => a + b,
-      0
-    );
-    if (Math.round(strategyPctSum) !== 100) {
-      throw new Error('Strategy allocation percentages must sum to 100');
-    }
-
-    // ----- Build new strategy items -----
+    // ----- Build new strategy items preserving original allocation ratios -----
+    const originalDeployed =
+      original.allocated_to_option_buying_inr +
+      original.allocated_to_option_selling_inr;
     const newStrategies: AllocationItem[] = original.strategies.map((item) => {
-      const name = item.strategy_info.name;
-      const pct = input.strategyAllocPct[name] ?? 0;
-      // Allocate capital proportionally to the deployed amount
-      const allocatedCap = (pct / 100) * deployedCapital;
-      // Preserve lot‑size ratio (lots per INR) – compute from original
-      const lotRatio =
-        item.number_of_lots / (item.allocated_capital_inr || 1);
-      const newLots = Math.round(allocatedCap * lotRatio);
+      // Ratio of this strategy's capital in the original deployed pool
+      const ratio = originalDeployed ? item.allocated_capital_inr / originalDeployed : 0;
+      const allocatedCap = ratio * deployedCapital;
+      // Number of lots based on capital_per_lot_inr (kept constant)
+      const newLots = Math.round(allocatedCap / item.capital_per_lot_inr);
       const allocationPercent = (allocatedCap / input.totalCapital) * 100;
       return {
         ...item,
