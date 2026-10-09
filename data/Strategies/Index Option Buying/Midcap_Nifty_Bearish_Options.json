@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Midcap Nifty Bearish Options",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Midcap Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Bearish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 1288,
+    "conditions": {
+      "best_market_conditions": "Bearish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-18",
+      "end_date": "2026-10-08"
+    },
+    "gross_pnl_inr": 461083.40,
+    "gross_return_percent": 461.08,
+    "average_monthly_return_percent": 13.56,
+    "multi_period_returns": {
+      "six_month_percent": 36.25,
+      "one_year_percent": 199.64,
+      "two_year_percent": 411.60
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 2.08,
+      "reward_to_risk_ratio": 3.34
+    }
+  },
+  "trade_performance": {
+    "total_trades": 241,
+    "win_rate_percent": 36.51,
+    "average_win_inr": 10080.68,
+    "average_loss_inr": -3021.39,
+    "biggest_win_inr": 69846.00,
+    "biggest_loss_inr": -25104.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "MIDCPNIFTY 25 APR 11400 PUT",
+      "pnl_inr": 69846.00
+    },
+    "best_month": {
+      "month": "April 2025",
+      "win_rate_percent": 60.00
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": 34074.00
+    }
+  }
+}

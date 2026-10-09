@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Midcap Nifty Options Combo",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Midcap Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Multi Directional",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 125000,
+    "deployed_users": 2631,
+    "conditions": {
+      "best_market_conditions": "Trending Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-01",
+      "end_date": "2026-10-08"
+    },
+    "gross_pnl_inr": 775732.90,
+    "gross_return_percent": 620.59,
+    "average_monthly_return_percent": 18.25,
+    "multi_period_returns": {
+      "six_month_percent": -6.58,
+      "one_year_percent": 243.04,
+      "two_year_percent": 577.12
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 2.00,
+      "reward_to_risk_ratio": 2.90
+    }
+  },
+  "trade_performance": {
+    "total_trades": 487,
+    "win_rate_percent": 38.60,
+    "average_win_inr": 8237.57,
+    "average_loss_inr": -2841.65,
+    "biggest_win_inr": 69846.00,
+    "biggest_loss_inr": -25104.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "MIDCPNIFTY 25 APR 400 PUT",
+      "pnl_inr": 69846.00
+    },
+    "best_month": {
+      "month": "June 2025",
+      "win_rate_percent": 54.55
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": 25860.00
+    }
+  }
+}

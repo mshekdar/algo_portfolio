@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Bank Nifty Bearish Options",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Bank Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Bearish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 966,
+    "conditions": {
+      "best_market_conditions": "Bearish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-03",
+      "end_date": "2026-10-07"
+    },
+    "gross_pnl_inr": 265858.25,
+    "gross_return_percent": 265.86,
+    "average_monthly_return_percent": 7.82,
+    "multi_period_returns": {
+      "six_month_percent": -8.83,
+      "one_year_percent": 99.83,
+      "two_year_percent": 227.61
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 1.63,
+      "reward_to_risk_ratio": 2.57
+    }
+  },
+  "trade_performance": {
+    "total_trades": 260,
+    "win_rate_percent": 38.85,
+    "average_win_inr": 6782.36,
+    "average_loss_inr": -2636.23,
+    "biggest_win_inr": 63864.00,
+    "biggest_loss_inr": -13834.50
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "BANKNIFTY 30 MAR 58800 PUT",
+      "pnl_inr": 63864.00
+    },
+    "best_month": {
+      "month": "March 2026",
+      "win_rate_percent": 57.14
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": -15427.50
+    }
+  }
+}

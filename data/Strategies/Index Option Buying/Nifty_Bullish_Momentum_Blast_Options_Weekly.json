@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Nifty Bullish Momentum Blast Options Weekly",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Bullish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 220,
+    "conditions": {
+      "best_market_conditions": "Bullish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-05-27",
+      "end_date": "2026-10-07"
+    },
+    "gross_pnl_inr": 167927.15,
+    "gross_return_percent": 167.93,
+    "average_monthly_return_percent": 5.60,
+    "multi_period_returns": {
+      "six_month_percent": 15.09,
+      "one_year_percent": 41.17,
+      "two_year_percent": 132.97
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 1.44,
+      "reward_to_risk_ratio": 3.26
+    }
+  },
+  "trade_performance": {
+    "total_trades": 238,
+    "win_rate_percent": 30.67,
+    "average_win_inr": 7490.50,
+    "average_loss_inr": -2296.24,
+    "biggest_win_inr": 48406.50,
+    "biggest_loss_inr": -14820.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "NIFTY 25 MAR 22650 CALL",
+      "pnl_inr": 48406.50
+    },
+    "best_month": {
+      "month": "March 2025",
+      "win_rate_percent": 66.67
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": -6542.25
+    }
+  }
+}

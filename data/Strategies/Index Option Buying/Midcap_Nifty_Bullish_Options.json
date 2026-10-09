@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Midcap Nifty Bullish Options",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Midcap Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Bullish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 1095,
+    "conditions": {
+      "best_market_conditions": "Bullish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-01",
+      "end_date": "2026-10-07"
+    },
+    "gross_pnl_inr": 401193.50,
+    "gross_return_percent": 401.19,
+    "average_monthly_return_percent": 11.80,
+    "multi_period_returns": {
+      "six_month_percent": -26.58,
+      "one_year_percent": 150.65,
+      "two_year_percent": 356.29
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 2.22,
+      "reward_to_risk_ratio": 2.80
+    }
+  },
+  "trade_performance": {
+    "total_trades": 248,
+    "win_rate_percent": 41.53,
+    "average_win_inr": 7094.53,
+    "average_loss_inr": -2534.95,
+    "biggest_win_inr": 58198.00,
+    "biggest_loss_inr": -13998.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "MIDCPNIFTY 25 NOV 13350 CALL",
+      "pnl_inr": 58198.00
+    },
+    "best_month": {
+      "month": "November 2025",
+      "win_rate_percent": 50.00
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": -8076.00
+    }
+  }
+}

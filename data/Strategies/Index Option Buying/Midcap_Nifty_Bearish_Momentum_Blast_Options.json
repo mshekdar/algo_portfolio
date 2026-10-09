@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Midcap Nifty Bearish Momentum Blast Options",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Midcap Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Bearish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 270,
+    "conditions": {
+      "best_market_conditions": "Bearish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-05-22",
+      "end_date": "2026-10-08"
+    },
+    "gross_pnl_inr": 320519.50,
+    "gross_return_percent": 320.52,
+    "average_monthly_return_percent": 10.68,
+    "multi_period_returns": {
+      "six_month_percent": 30.33,
+      "one_year_percent": 254.62,
+      "two_year_percent": 332.59
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 1.87,
+      "reward_to_risk_ratio": 2.13
+    }
+  },
+  "trade_performance": {
+    "total_trades": 156,
+    "win_rate_percent": 46.79,
+    "average_win_inr": 9432.81,
+    "average_loss_inr": -4434.65,
+    "biggest_win_inr": 33826.80,
+    "biggest_loss_inr": -12981.60
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "MIDCPNIFTY 30 SEP 13175 PUT",
+      "pnl_inr": 33826.80
+    },
+    "best_month": {
+      "month": "March 2026",
+      "win_rate_percent": 85.71
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": 10566.00
+    }
+  }
+}

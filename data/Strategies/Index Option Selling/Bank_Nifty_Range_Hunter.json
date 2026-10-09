@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Bank Nifty Range Hunter",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Bank Nifty",
+    "category": "Index Options Selling",
+    "market_bias": "Neutral",
+    "risk_level": "Medium Risk",
+    "recommended_capital_inr": 350000,
+    "deployed_users": 541,
+    "conditions": {
+      "best_market_conditions": "Sideways Market",
+      "rationale": "Option Selling",
+      "trade_frequency": "Normal"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-05",
+      "end_date": "2026-09-29"
+    },
+    "gross_pnl_inr": 392391.00,
+    "gross_return_percent": 112.11,
+    "average_monthly_return_percent": 3.40,
+    "multi_period_returns": {
+      "six_month_percent": 20.11,
+      "one_year_percent": 48.20,
+      "two_year_percent": 79.21
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -15.00,
+      "profit_factor": 2.05,
+      "reward_to_risk_ratio": 0.96
+    }
+  },
+  "trade_performance": {
+    "total_trades": 132,
+    "win_rate_percent": 68.18,
+    "average_win_inr": 8523.87,
+    "average_loss_inr": -8922.79,
+    "biggest_win_inr": 40983.00,
+    "biggest_loss_inr": -38820.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "BANKNIFTY 26 JUN 50600 CALL",
+      "pnl_inr": 40983.00
+    },
+    "best_month": {
+      "month": "May 2026",
+      "win_rate_percent": 100.00
+    },
+    "current_month_pnl": {
+      "period": "September 2026",
+      "overall_pnl_inr": 5592.00
+    }
+  }
+}

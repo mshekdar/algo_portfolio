@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Bank Nifty Call Ratio Spread",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Bank Nifty",
+    "category": "Index Options Selling",
+    "market_bias": "Neutral",
+    "risk_level": "Medium Risk",
+    "recommended_capital_inr": 350000,
+    "deployed_users": 703,
+    "conditions": {
+      "best_market_conditions": "Sideways Market",
+      "rationale": "Option Selling",
+      "trade_frequency": "Low"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-18",
+      "end_date": "2026-08-11"
+    },
+    "gross_pnl_inr": 198879.75,
+    "gross_return_percent": 56.82,
+    "average_monthly_return_percent": 1.78,
+    "multi_period_returns": {
+      "six_month_percent": 13.14,
+      "one_year_percent": 19.26,
+      "two_year_percent": 45.43
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -25.00,
+      "profit_factor": 9.47,
+      "reward_to_risk_ratio": 1.89
+    }
+  },
+  "trade_performance": {
+    "total_trades": 24,
+    "win_rate_percent": 83.33,
+    "average_win_inr": 11118.59,
+    "average_loss_inr": -5873.00,
+    "biggest_win_inr": 20170.50,
+    "biggest_loss_inr": -11443.25
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "BANKNIFTY 27 FEB 50100 CALL",
+      "pnl_inr": 20170.50
+    },
+    "best_month": {
+      "month": "February 2025",
+      "win_rate_percent": 100.00
+    },
+    "current_month_pnl": {
+      "period": "August 2026",
+      "overall_pnl_inr": 5599.50
+    }
+  }
+}

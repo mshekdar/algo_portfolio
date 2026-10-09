@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Nifty Bearish Momentum Blast Options Weekly",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Bearish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 265,
+    "conditions": {
+      "best_market_conditions": "Bearish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-05-28",
+      "end_date": "2026-10-08"
+    },
+    "gross_pnl_inr": 219963.70,
+    "gross_return_percent": 219.96,
+    "average_monthly_return_percent": 7.33,
+    "multi_period_returns": {
+      "six_month_percent": 67.39,
+      "one_year_percent": 195.94,
+      "two_year_percent": 212.11
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 1.54,
+      "reward_to_risk_ratio": 3.16
+    }
+  },
+  "trade_performance": {
+    "total_trades": 263,
+    "win_rate_percent": 32.70,
+    "average_win_inr": 7320.11,
+    "average_loss_inr": -2313.93,
+    "biggest_win_inr": 34787.25,
+    "biggest_loss_inr": -11906.25
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "NIFTY 29 APR 23050 PUT",
+      "pnl_inr": 34787.25
+    },
+    "best_month": {
+      "month": "March 2026",
+      "win_rate_percent": 62.50
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": 4696.25
+    }
+  }
+}

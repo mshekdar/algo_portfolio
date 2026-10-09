@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Nifty Short Straddle 2.0",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Nifty",
+    "category": "Index Options Selling",
+    "market_bias": "Neutral",
+    "risk_level": "Low Risk",
+    "recommended_capital_inr": 200000,
+    "deployed_users": 1709,
+    "conditions": {
+      "best_market_conditions": "Sideways Market",
+      "rationale": "Option Selling",
+      "trade_frequency": "Low"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-11",
+      "end_date": "2026-09-09"
+    },
+    "gross_pnl_inr": 156123.75,
+    "gross_return_percent": 78.06,
+    "average_monthly_return_percent": 2.37,
+    "multi_period_returns": {
+      "six_month_percent": 9.66,
+      "one_year_percent": 20.01,
+      "two_year_percent": 45.92
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -25.00,
+      "profit_factor": 3.32,
+      "reward_to_risk_ratio": 0.69
+    }
+  },
+  "trade_performance": {
+    "total_trades": 29,
+    "win_rate_percent": 82.76,
+    "average_win_inr": 9307.93,
+    "average_loss_inr": -13453.30,
+    "biggest_win_inr": 24150.00,
+    "biggest_loss_inr": -31942.50
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "NIFTY 27 FEB 21500 PUT",
+      "pnl_inr": 24150.00
+    },
+    "best_month": {
+      "month": "February 2025",
+      "win_rate_percent": 100.00
+    },
+    "current_month_pnl": {
+      "period": "September 2026",
+      "overall_pnl_inr": -8014.50
+    }
+  }
+}

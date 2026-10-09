@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Bank Nifty Bearish Momentum Blast Options",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Bank Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Bearish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 166,
+    "conditions": {
+      "best_market_conditions": "Bearish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-05-21",
+      "end_date": "2026-10-07"
+    },
+    "gross_pnl_inr": 79244.80,
+    "gross_return_percent": 79.24,
+    "average_monthly_return_percent": 2.64,
+    "multi_period_returns": {
+      "six_month_percent": 4.94,
+      "one_year_percent": 83.28,
+      "two_year_percent": 104.76
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 1.15,
+      "reward_to_risk_ratio": 2.31
+    }
+  },
+  "trade_performance": {
+    "total_trades": 327,
+    "win_rate_percent": 33.33,
+    "average_win_inr": 5472.56,
+    "average_loss_inr": -2372.77,
+    "biggest_win_inr": 42548.40,
+    "biggest_loss_inr": -15178.80
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "BANKNIFTY 31 MAR 58800 PUT",
+      "pnl_inr": 42548.40
+    },
+    "best_month": {
+      "month": "March 2026",
+      "win_rate_percent": 45.45
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": -7542.00
+    }
+  }
+}

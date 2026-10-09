@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Nifty Options Combo",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Multi Directional",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 125000,
+    "deployed_users": 5445,
+    "conditions": {
+      "best_market_conditions": "Trending Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-04",
+      "end_date": "2026-10-08"
+    },
+    "gross_pnl_inr": 801238.00,
+    "gross_return_percent": 640.99,
+    "average_monthly_return_percent": 18.85,
+    "multi_period_returns": {
+      "six_month_percent": 13.22,
+      "one_year_percent": 190.63,
+      "two_year_percent": 543.76
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 2.31,
+      "reward_to_risk_ratio": 2.69
+    }
+  },
+  "trade_performance": {
+    "total_trades": 505,
+    "win_rate_percent": 46.14,
+    "average_win_inr": 6062.85,
+    "average_loss_inr": -2256.11,
+    "biggest_win_inr": 72877.50,
+    "biggest_loss_inr": -12720.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "NIFTY 25 MAR 22550 CALL",
+      "pnl_inr": 72877.50
+    },
+    "best_month": {
+      "month": "April 2025",
+      "win_rate_percent": 76.92
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": 17881.50
+    }
+  }
+}

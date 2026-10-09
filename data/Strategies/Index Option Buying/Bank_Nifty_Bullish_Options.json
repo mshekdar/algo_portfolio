@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Bank Nifty Bullish Options",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Bank Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Bullish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 1006,
+    "conditions": {
+      "best_market_conditions": "Bullish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-05",
+      "end_date": "2026-10-08"
+    },
+    "gross_pnl_inr": 382402.50,
+    "gross_return_percent": 382.40,
+    "average_monthly_return_percent": 11.25,
+    "multi_period_returns": {
+      "six_month_percent": -49.63,
+      "one_year_percent": 17.29,
+      "two_year_percent": 310.13
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 1.97,
+      "reward_to_risk_ratio": 2.45
+    }
+  },
+  "trade_performance": {
+    "total_trades": 245,
+    "win_rate_percent": 44.49,
+    "average_win_inr": 7135.92,
+    "average_loss_inr": -2907.45,
+    "biggest_win_inr": 112270.50,
+    "biggest_loss_inr": -11130.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "BANKNIFTY 25 APR 50900 CALL",
+      "pnl_inr": 112270.50
+    },
+    "best_month": {
+      "month": "April 2025",
+      "win_rate_percent": 100.00
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": -11658.00
+    }
+  }
+}

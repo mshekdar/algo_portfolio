@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Midcap Nifty Bullish Momentum Blast Options",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Midcap Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Bullish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 295,
+    "conditions": {
+      "best_market_conditions": "Bullish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-05-27",
+      "end_date": "2026-10-07"
+    },
+    "gross_pnl_inr": 362094.30,
+    "gross_return_percent": 362.09,
+    "average_monthly_return_percent": 12.07,
+    "multi_period_returns": {
+      "six_month_percent": 137.24,
+      "one_year_percent": 254.55,
+      "two_year_percent": 340.44
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 1.81,
+      "reward_to_risk_ratio": 2.66
+    }
+  },
+  "trade_performance": {
+    "total_trades": 183,
+    "win_rate_percent": 40.44,
+    "average_win_inr": 10950.34,
+    "average_loss_inr": -4112.21,
+    "biggest_win_inr": 89755.20,
+    "biggest_loss_inr": -12156.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "MIDCPNIFTY 28 APR 12550 CALL",
+      "pnl_inr": 89755.20
+    },
+    "best_month": {
+      "month": "April 2026",
+      "win_rate_percent": 50.00
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": -16674.00
+    }
+  }
+}

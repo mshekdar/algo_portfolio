@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Sensex Bearish Momentum Blast Options Weekly",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Sensex",
+    "category": "Index Options Buying",
+    "market_bias": "Bearish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 600,
+    "conditions": {
+      "best_market_conditions": "Bearish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-05-21",
+      "end_date": "2026-10-08"
+    },
+    "gross_pnl_inr": 360288.00,
+    "gross_return_percent": 360.29,
+    "average_monthly_return_percent": 12.01,
+    "multi_period_returns": {
+      "six_month_percent": 137.31,
+      "one_year_percent": 315.54,
+      "two_year_percent": 374.44
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 2.01,
+      "reward_to_risk_ratio": 2.46
+    }
+  },
+  "trade_performance": {
+    "total_trades": 222,
+    "win_rate_percent": 45.05,
+    "average_win_inr": 7157.10,
+    "average_loss_inr": -2913.30,
+    "biggest_win_inr": 39124.80,
+    "biggest_loss_inr": -17023.40
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "SENSEX 26 MAR 77900 PUT",
+      "pnl_inr": 39124.80
+    },
+    "best_month": {
+      "month": "March 2026",
+      "win_rate_percent": 66.67
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": 15704.00
+    }
+  }
+}

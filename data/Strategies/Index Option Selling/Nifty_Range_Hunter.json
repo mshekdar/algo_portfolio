@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Nifty Range Hunter",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Nifty",
+    "category": "Index Options Selling",
+    "market_bias": "Neutral",
+    "risk_level": "Medium Risk",
+    "recommended_capital_inr": 350000,
+    "deployed_users": 597,
+    "conditions": {
+      "best_market_conditions": "Sideways Market",
+      "rationale": "Option Selling",
+      "trade_frequency": "Normal"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-05",
+      "end_date": "2026-09-29"
+    },
+    "gross_pnl_inr": 297667.50,
+    "gross_return_percent": 85.05,
+    "average_monthly_return_percent": 2.58,
+    "multi_period_returns": {
+      "six_month_percent": 29.00,
+      "one_year_percent": 49.48,
+      "two_year_percent": 60.87
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -20.00,
+      "profit_factor": 1.94,
+      "reward_to_risk_ratio": 1.15
+    }
+  },
+  "trade_performance": {
+    "total_trades": 132,
+    "win_rate_percent": 62.88,
+    "average_win_inr": 7398.45,
+    "average_loss_inr": -6457.22,
+    "biggest_win_inr": 29344.25,
+    "biggest_loss_inr": -29828.50
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "NIFTY 25 JUL 24400 CALL",
+      "pnl_inr": 29344.25
+    },
+    "best_month": {
+      "month": "March 2026",
+      "win_rate_percent": 80.00
+    },
+    "current_month_pnl": {
+      "period": "September 2026",
+      "overall_pnl_inr": 3328.00
+    }
+  }
+}

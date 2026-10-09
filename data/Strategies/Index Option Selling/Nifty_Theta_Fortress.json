@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Nifty Theta Fortress",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Nifty",
+    "category": "Index Options Selling",
+    "market_bias": "Neutral",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 300000,
+    "deployed_users": 1046,
+    "conditions": {
+      "best_market_conditions": "Sideways Market",
+      "rationale": "Option Selling",
+      "trade_frequency": "Normal"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2025-01-02",
+      "end_date": "2026-10-06"
+    },
+    "gross_pnl_inr": 313904.50,
+    "gross_return_percent": 104.63,
+    "average_monthly_return_percent": 4.76,
+    "multi_period_returns": {
+      "six_month_percent": 57.82,
+      "one_year_percent": 52.67,
+      "eighteen_month_percent": 97.91
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -25.00,
+      "profit_factor": 1.77,
+      "reward_to_risk_ratio": 0.65
+    }
+  },
+  "trade_performance": {
+    "total_trades": 176,
+    "win_rate_percent": 73.30,
+    "average_win_inr": 5577.58,
+    "average_loss_inr": -8629.86,
+    "biggest_win_inr": 27010.75,
+    "biggest_loss_inr": -39500.50
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "NIFTY 07 APR 22900 CALL",
+      "pnl_inr": 27010.75
+    },
+    "best_month": {
+      "month": "June 2026",
+      "win_rate_percent": 100.00
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": 4153.50
+    }
+  }
+}

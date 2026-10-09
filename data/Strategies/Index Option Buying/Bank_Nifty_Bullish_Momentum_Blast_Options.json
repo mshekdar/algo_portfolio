@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Bank Nifty Bullish Momentum Blast Options",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Bank Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Bullish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 169,
+    "conditions": {
+      "best_market_conditions": "Bullish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-05-21",
+      "end_date": "2026-10-08"
+    },
+    "gross_pnl_inr": 201160.50,
+    "gross_return_percent": 201.16,
+    "average_monthly_return_percent": 6.71,
+    "multi_period_returns": {
+      "six_month_percent": 18.77,
+      "one_year_percent": 62.04,
+      "two_year_percent": 208.82
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 1.42,
+      "reward_to_risk_ratio": 2.66
+    }
+  },
+  "trade_performance": {
+    "total_trades": 305,
+    "win_rate_percent": 34.75,
+    "average_win_inr": 6445.76,
+    "average_loss_inr": -2422.56,
+    "biggest_win_inr": 59014.80,
+    "biggest_loss_inr": -20192.40
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "BANKNIFTY 29 APR 52300 CALL",
+      "pnl_inr": 59014.80
+    },
+    "best_month": {
+      "month": "April 2026",
+      "win_rate_percent": 44.44
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": -10764.00
+    }
+  }
+}

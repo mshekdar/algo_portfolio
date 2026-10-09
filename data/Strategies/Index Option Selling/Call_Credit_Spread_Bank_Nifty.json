@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Call Credit Spread Bank Nifty",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Bank Nifty",
+    "category": "Index Options Selling",
+    "market_bias": "Bearish",
+    "risk_level": "Medium Risk",
+    "recommended_capital_inr": 150000,
+    "deployed_users": 7643,
+    "conditions": {
+      "best_market_conditions": "Bearish Market",
+      "rationale": "Option Selling",
+      "trade_frequency": "Low"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-11",
+      "end_date": "2026-09-02"
+    },
+    "gross_pnl_inr": 240953.25,
+    "gross_return_percent": 160.64,
+    "average_monthly_return_percent": 4.87,
+    "multi_period_returns": {
+      "six_month_percent": 31.90,
+      "one_year_percent": 57.47,
+      "two_year_percent": 115.10
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -25.00,
+      "profit_factor": 10.76,
+      "reward_to_risk_ratio": 1.79
+    }
+  },
+  "trade_performance": {
+    "total_trades": 28,
+    "win_rate_percent": 85.71,
+    "average_win_inr": 11068.85,
+    "average_loss_inr": -6174.81,
+    "biggest_win_inr": 28766.50,
+    "biggest_loss_inr": -9191.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "BANKNIFTY 30 JAN 51800 CALL",
+      "pnl_inr": 28766.50
+    },
+    "best_month": {
+      "month": "January 2025",
+      "win_rate_percent": 100.00
+    },
+    "current_month_pnl": {
+      "period": "September 2026",
+      "overall_pnl_inr": 7533.00
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Nifty Bearish Options",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Nifty",
+    "category": "Index Options Buying",
+    "market_bias": "Bearish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 3176,
+    "conditions": {
+      "best_market_conditions": "Bearish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-04",
+      "end_date": "2026-10-08"
+    },
+    "gross_pnl_inr": 425326.00,
+    "gross_return_percent": 425.33,
+    "average_monthly_return_percent": 12.51,
+    "multi_period_returns": {
+      "six_month_percent": 53.62,
+      "one_year_percent": 198.28,
+      "two_year_percent": 379.02
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 2.47,
+      "reward_to_risk_ratio": 3.15
+    }
+  },
+  "trade_performance": {
+    "total_trades": 265,
+    "win_rate_percent": 43.77,
+    "average_win_inr": 6157.21,
+    "average_loss_inr": -1952.10,
+    "biggest_win_inr": 48270.00,
+    "biggest_loss_inr": -12720.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "NIFTY 25 APR 23050 PUT",
+      "pnl_inr": 48270.00
+    },
+    "best_month": {
+      "month": "April 2025",
+      "win_rate_percent": 100.00
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": 25119.25
+    }
+  }
+}

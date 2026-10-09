@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Sensex Bullish Momentum Blast Options Weekly",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Sensex",
+    "category": "Index Options Buying",
+    "market_bias": "Bullish",
+    "risk_level": "High Risk",
+    "recommended_capital_inr": 100000,
+    "deployed_users": 630,
+    "conditions": {
+      "best_market_conditions": "Bullish Market",
+      "rationale": "Price Action",
+      "trade_frequency": "High"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-05-22",
+      "end_date": "2026-10-07"
+    },
+    "gross_pnl_inr": 373197.60,
+    "gross_return_percent": 373.20,
+    "average_monthly_return_percent": 12.44,
+    "multi_period_returns": {
+      "six_month_percent": 110.21,
+      "one_year_percent": 191.83,
+      "two_year_percent": 331.72
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -50.00,
+      "profit_factor": 2.16,
+      "reward_to_risk_ratio": 2.06
+    }
+  },
+  "trade_performance": {
+    "total_trades": 201,
+    "win_rate_percent": 51.24,
+    "average_win_inr": 6741.92,
+    "average_loss_inr": -3277.75,
+    "biggest_win_inr": 51654.24,
+    "biggest_loss_inr": -18680.40
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "SENSEX 24 APR 75200 CALL",
+      "pnl_inr": 51654.24
+    },
+    "best_month": {
+      "month": "April 2026",
+      "win_rate_percent": 50.00
+    },
+    "current_month_pnl": {
+      "period": "October 2026",
+      "overall_pnl_inr": -6732.00
+    }
+  }
+}

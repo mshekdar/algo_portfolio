@@ -1,0 +1,387 @@
+{
+  "portfolio_name": "Balanced Index Options Algo Portfolio — ₹30 Lakh",
+  "assumption": "recommended_capital_inr is capital required per one lot, as specified by the user.",
+  "total_capital_inr": 3000000,
+  "allocated_to_option_buying_inr": 975000,
+  "option_buying_percent_of_total": 32.5,
+  "allocated_to_option_selling_inr": 1350000,
+  "option_selling_percent_of_total": 45.0,
+  "total_strategy_allocation_inr": 2325000,
+  "deployed_percent_of_total": 77.5,
+  "cash_reserve_inr": 675000,
+  "cash_reserve_percent": 22.5,
+  "total_lots_across_strategies": 14,
+  "strategies": [
+    {
+      "strategy_info": {
+        "name": "Nifty Options Combo",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Nifty",
+        "category": "Index Options Buying",
+        "market_bias": "Multi Directional",
+        "risk_level": "High Risk",
+        "recommended_capital_inr": 125000,
+        "deployed_users": 5445,
+        "conditions": {
+          "best_market_conditions": "Trending Market",
+          "rationale": "Price Action",
+          "trade_frequency": "High"
+        }
+      },
+      "number_of_lots": 2,
+      "capital_per_lot_inr": 125000,
+      "allocated_capital_inr": 250000,
+      "allocation_percent_of_total": 8.33,
+      "historical_metrics_reference": {
+        "gross_return_percent": 640.99,
+        "max_drawdown_percent": -50.0,
+        "profit_factor": 2.31,
+        "total_trades": 505,
+        "win_rate_percent": 46.14
+      }
+    },
+    {
+      "strategy_info": {
+        "name": "Midcap Nifty Options Combo",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Midcap Nifty",
+        "category": "Index Options Buying",
+        "market_bias": "Multi Directional",
+        "risk_level": "High Risk",
+        "recommended_capital_inr": 125000,
+        "deployed_users": 2631,
+        "conditions": {
+          "best_market_conditions": "Trending Market",
+          "rationale": "Price Action",
+          "trade_frequency": "High"
+        }
+      },
+      "number_of_lots": 1,
+      "capital_per_lot_inr": 125000,
+      "allocated_capital_inr": 125000,
+      "allocation_percent_of_total": 4.17,
+      "historical_metrics_reference": {
+        "gross_return_percent": 620.59,
+        "max_drawdown_percent": -50.0,
+        "profit_factor": 2.0,
+        "total_trades": 487,
+        "win_rate_percent": 38.6
+      }
+    },
+    {
+      "strategy_info": {
+        "name": "Nifty Bearish Options",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Nifty",
+        "category": "Index Options Buying",
+        "market_bias": "Bearish",
+        "risk_level": "High Risk",
+        "recommended_capital_inr": 100000,
+        "deployed_users": 3176,
+        "conditions": {
+          "best_market_conditions": "Bearish Market",
+          "rationale": "Price Action",
+          "trade_frequency": "High"
+        }
+      },
+      "number_of_lots": 1,
+      "capital_per_lot_inr": 100000,
+      "allocated_capital_inr": 100000,
+      "allocation_percent_of_total": 3.33,
+      "historical_metrics_reference": {
+        "gross_return_percent": 425.33,
+        "max_drawdown_percent": -50.0,
+        "profit_factor": 2.47,
+        "total_trades": 265,
+        "win_rate_percent": 43.77
+      }
+    },
+    {
+      "strategy_info": {
+        "name": "Nifty Bullish Options",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Nifty",
+        "category": "Index Options Buying",
+        "market_bias": "Bullish",
+        "risk_level": "High Risk",
+        "recommended_capital_inr": 100000,
+        "deployed_users": 3423,
+        "conditions": {
+          "best_market_conditions": "Bullish Market",
+          "rationale": "Price Action",
+          "trade_frequency": "High"
+        }
+      },
+      "number_of_lots": 1,
+      "capital_per_lot_inr": 100000,
+      "allocated_capital_inr": 100000,
+      "allocation_percent_of_total": 3.33,
+      "historical_metrics_reference": {
+        "gross_return_percent": 387.16,
+        "max_drawdown_percent": -50.0,
+        "profit_factor": 2.21,
+        "total_trades": 242,
+        "win_rate_percent": 48.35
+      }
+    },
+    {
+      "strategy_info": {
+        "name": "Midcap Nifty Bearish Options",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Midcap Nifty",
+        "category": "Index Options Buying",
+        "market_bias": "Bearish",
+        "risk_level": "High Risk",
+        "recommended_capital_inr": 100000,
+        "deployed_users": 1288,
+        "conditions": {
+          "best_market_conditions": "Bearish Market",
+          "rationale": "Price Action",
+          "trade_frequency": "High"
+        }
+      },
+      "number_of_lots": 1,
+      "capital_per_lot_inr": 100000,
+      "allocated_capital_inr": 100000,
+      "allocation_percent_of_total": 3.33,
+      "historical_metrics_reference": {
+        "gross_return_percent": 461.08,
+        "max_drawdown_percent": -50.0,
+        "profit_factor": 2.08,
+        "total_trades": 241,
+        "win_rate_percent": 36.51
+      }
+    },
+    {
+      "strategy_info": {
+        "name": "Midcap Nifty Bullish Momentum Blast Options",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Midcap Nifty",
+        "category": "Index Options Buying",
+        "market_bias": "Bullish",
+        "risk_level": "High Risk",
+        "recommended_capital_inr": 100000,
+        "deployed_users": 295,
+        "conditions": {
+          "best_market_conditions": "Bullish Market",
+          "rationale": "Price Action",
+          "trade_frequency": "High"
+        }
+      },
+      "number_of_lots": 1,
+      "capital_per_lot_inr": 100000,
+      "allocated_capital_inr": 100000,
+      "allocation_percent_of_total": 3.33,
+      "historical_metrics_reference": {
+        "gross_return_percent": 362.09,
+        "max_drawdown_percent": -50.0,
+        "profit_factor": 1.81,
+        "total_trades": 183,
+        "win_rate_percent": 40.44
+      }
+    },
+    {
+      "strategy_info": {
+        "name": "Sensex Bearish Momentum Blast Options Weekly",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Sensex",
+        "category": "Index Options Buying",
+        "market_bias": "Bearish",
+        "risk_level": "High Risk",
+        "recommended_capital_inr": 100000,
+        "deployed_users": 600,
+        "conditions": {
+          "best_market_conditions": "Bearish Market",
+          "rationale": "Price Action",
+          "trade_frequency": "High"
+        }
+      },
+      "number_of_lots": 1,
+      "capital_per_lot_inr": 100000,
+      "allocated_capital_inr": 100000,
+      "allocation_percent_of_total": 3.33,
+      "historical_metrics_reference": {
+        "gross_return_percent": 360.29,
+        "max_drawdown_percent": -50.0,
+        "profit_factor": 2.01,
+        "total_trades": 222,
+        "win_rate_percent": 45.05
+      }
+    },
+    {
+      "strategy_info": {
+        "name": "Sensex Bullish Momentum Blast Options Weekly",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Sensex",
+        "category": "Index Options Buying",
+        "market_bias": "Bullish",
+        "risk_level": "High Risk",
+        "recommended_capital_inr": 100000,
+        "deployed_users": 630,
+        "conditions": {
+          "best_market_conditions": "Bullish Market",
+          "rationale": "Price Action",
+          "trade_frequency": "High"
+        }
+      },
+      "number_of_lots": 1,
+      "capital_per_lot_inr": 100000,
+      "allocated_capital_inr": 100000,
+      "allocation_percent_of_total": 3.33,
+      "historical_metrics_reference": {
+        "gross_return_percent": 373.2,
+        "max_drawdown_percent": -50.0,
+        "profit_factor": 2.16,
+        "total_trades": 201,
+        "win_rate_percent": 51.24
+      }
+    },
+    {
+      "strategy_info": {
+        "name": "Bank Nifty Range Hunter",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Bank Nifty",
+        "category": "Index Options Selling",
+        "market_bias": "Neutral",
+        "risk_level": "Medium Risk",
+        "recommended_capital_inr": 350000,
+        "deployed_users": 541,
+        "conditions": {
+          "best_market_conditions": "Sideways Market",
+          "rationale": "Option Selling",
+          "trade_frequency": "Normal"
+        }
+      },
+      "number_of_lots": 1,
+      "capital_per_lot_inr": 350000,
+      "allocated_capital_inr": 350000,
+      "allocation_percent_of_total": 11.67,
+      "historical_metrics_reference": {
+        "gross_return_percent": 112.11,
+        "max_drawdown_percent": -15.0,
+        "profit_factor": 2.05,
+        "total_trades": 132,
+        "win_rate_percent": 68.18
+      }
+    },
+    {
+      "strategy_info": {
+        "name": "Nifty Range Hunter",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Nifty",
+        "category": "Index Options Selling",
+        "market_bias": "Neutral",
+        "risk_level": "Medium Risk",
+        "recommended_capital_inr": 350000,
+        "deployed_users": 597,
+        "conditions": {
+          "best_market_conditions": "Sideways Market",
+          "rationale": "Option Selling",
+          "trade_frequency": "Normal"
+        }
+      },
+      "number_of_lots": 1,
+      "capital_per_lot_inr": 350000,
+      "allocated_capital_inr": 350000,
+      "allocation_percent_of_total": 11.67,
+      "historical_metrics_reference": {
+        "gross_return_percent": 85.05,
+        "max_drawdown_percent": -20.0,
+        "profit_factor": 1.94,
+        "total_trades": 132,
+        "win_rate_percent": 62.88
+      }
+    },
+    {
+      "strategy_info": {
+        "name": "Nifty Theta Fortress",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Nifty",
+        "category": "Index Options Selling",
+        "market_bias": "Neutral",
+        "risk_level": "High Risk",
+        "recommended_capital_inr": 300000,
+        "deployed_users": 1046,
+        "conditions": {
+          "best_market_conditions": "Sideways Market",
+          "rationale": "Option Selling",
+          "trade_frequency": "Normal"
+        }
+      },
+      "number_of_lots": 1,
+      "capital_per_lot_inr": 300000,
+      "allocated_capital_inr": 300000,
+      "allocation_percent_of_total": 10.0,
+      "historical_metrics_reference": {
+        "gross_return_percent": 104.63,
+        "max_drawdown_percent": -25.0,
+        "profit_factor": 1.77,
+        "total_trades": 176,
+        "win_rate_percent": 73.3
+      }
+    },
+    {
+      "strategy_info": {
+        "name": "Bank Nifty Short Straddle 2.0",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Bank Nifty",
+        "category": "Index Options Selling",
+        "market_bias": "Neutral",
+        "risk_level": "Low Risk",
+        "recommended_capital_inr": 200000,
+        "deployed_users": 6009,
+        "conditions": {
+          "best_market_conditions": "Sideways Market",
+          "rationale": "Option Selling",
+          "trade_frequency": "Low"
+        }
+      },
+      "number_of_lots": 1,
+      "capital_per_lot_inr": 200000,
+      "allocated_capital_inr": 200000,
+      "allocation_percent_of_total": 6.67,
+      "historical_metrics_reference": {
+        "gross_return_percent": 116.92,
+        "max_drawdown_percent": -25.0,
+        "profit_factor": 5.9,
+        "total_trades": 29,
+        "win_rate_percent": 86.21
+      }
+    },
+    {
+      "strategy_info": {
+        "name": "Call Credit Spread Bank Nifty",
+        "provider": "Stockwiz Technologies LLP",
+        "instrument": "Bank Nifty",
+        "category": "Index Options Selling",
+        "market_bias": "Bearish",
+        "risk_level": "Medium Risk",
+        "recommended_capital_inr": 150000,
+        "deployed_users": 7643,
+        "conditions": {
+          "best_market_conditions": "Bearish Market",
+          "rationale": "Option Selling",
+          "trade_frequency": "Low"
+        }
+      },
+      "number_of_lots": 1,
+      "capital_per_lot_inr": 150000,
+      "allocated_capital_inr": 150000,
+      "allocation_percent_of_total": 5.0,
+      "historical_metrics_reference": {
+        "gross_return_percent": 160.64,
+        "max_drawdown_percent": -25.0,
+        "profit_factor": 10.76,
+        "total_trades": 28,
+        "win_rate_percent": 85.71
+      }
+    }
+  ],
+  "risk_notes": [
+    "Strategy statistics are historical/backtest fields from the source JSON and are not forecasts.",
+    "Option-buying strategies in this dataset report -50% maximum drawdown; paired bullish/bearish strategies may overlap or create offsetting orders.",
+    "Option-selling strategies may experience correlated losses during sharp moves or volatility spikes; the source JSON lacks synchronized return series/correlation data.",
+    "The Bank Nifty Short Straddle 2.0 and Call Credit Spread Bank Nifty have only 29 and 28 trades respectively; treat their high reported profit factors cautiously.",
+    "Cash reserve is not allocated to strategies and should remain available for margin/liquidity needs; verify actual broker margin and lot specifications before deployment."
+  ]
+}

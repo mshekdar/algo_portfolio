@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Nifty Call Ratio Spread",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Nifty",
+    "category": "Index Options Selling",
+    "market_bias": "Neutral",
+    "risk_level": "Medium Risk",
+    "recommended_capital_inr": 350000,
+    "deployed_users": 646,
+    "conditions": {
+      "best_market_conditions": "Sideways Market",
+      "rationale": "Option Selling",
+      "trade_frequency": "Low"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-18",
+      "end_date": "2026-09-09"
+    },
+    "gross_pnl_inr": 149042.75,
+    "gross_return_percent": 42.58,
+    "average_monthly_return_percent": 1.29,
+    "multi_period_returns": {
+      "six_month_percent": 7.42,
+      "one_year_percent": 14.87,
+      "two_year_percent": 35.23
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -25.00,
+      "profit_factor": 8.63,
+      "reward_to_risk_ratio": 2.47
+    }
+  },
+  "trade_performance": {
+    "total_trades": 27,
+    "win_rate_percent": 77.78,
+    "average_win_inr": 8027.43,
+    "average_loss_inr": -3255.54,
+    "biggest_win_inr": 17298.75,
+    "biggest_loss_inr": -5835.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "NIFTY 27 FEB 23700 CALL",
+      "pnl_inr": 17298.75
+    },
+    "best_month": {
+      "month": "February 2025",
+      "win_rate_percent": 100.00
+    },
+    "current_month_pnl": {
+      "period": "September 2026",
+      "overall_pnl_inr": 6454.50
+    }
+  }
+}

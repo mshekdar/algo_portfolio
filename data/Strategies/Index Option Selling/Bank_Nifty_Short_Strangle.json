@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Bank Nifty Short Strangle",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Bank Nifty",
+    "category": "Index Options Selling",
+    "market_bias": "Neutral",
+    "risk_level": "Medium Risk",
+    "recommended_capital_inr": 350000,
+    "deployed_users": 687,
+    "conditions": {
+      "best_market_conditions": "Sideways Market",
+      "rationale": "Option Selling",
+      "trade_frequency": "Low"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-11",
+      "end_date": "2026-09-09"
+    },
+    "gross_pnl_inr": 233554.00,
+    "gross_return_percent": 66.73,
+    "average_monthly_return_percent": 2.02,
+    "multi_period_returns": {
+      "six_month_percent": 3.77,
+      "one_year_percent": 8.41,
+      "two_year_percent": 37.15
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -25.00,
+      "profit_factor": 4.06,
+      "reward_to_risk_ratio": 0.92
+    }
+  },
+  "trade_performance": {
+    "total_trades": 27,
+    "win_rate_percent": 81.48,
+    "average_win_inr": 14080.65,
+    "average_loss_inr": -15244.05,
+    "biggest_win_inr": 38351.25,
+    "biggest_loss_inr": -26919.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "BANKNIFTY 26 JUN 48100 PUT",
+      "pnl_inr": 38351.25
+    },
+    "best_month": {
+      "month": "June 2024",
+      "win_rate_percent": 100.00
+    },
+    "current_month_pnl": {
+      "period": "September 2026",
+      "overall_pnl_inr": 7239.00
+    }
+  }
+}

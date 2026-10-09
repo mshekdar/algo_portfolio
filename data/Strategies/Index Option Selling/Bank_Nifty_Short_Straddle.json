@@ -1,0 +1,58 @@
+{
+  "strategy_info": {
+    "name": "Bank Nifty Short Straddle",
+    "provider": "Stockwiz Technologies LLP",
+    "instrument": "Bank Nifty",
+    "category": "Index Options Selling",
+    "market_bias": "Neutral",
+    "risk_level": "Medium Risk",
+    "recommended_capital_inr": 375000,
+    "deployed_users": 491,
+    "conditions": {
+      "best_market_conditions": "Sideways Market",
+      "rationale": "Option Selling",
+      "trade_frequency": "Low"
+    }
+  },
+  "backtest_overview": {
+    "period": {
+      "start_date": "2024-01-11",
+      "end_date": "2026-09-09"
+    },
+    "gross_pnl_inr": 250482.50,
+    "gross_return_percent": 66.80,
+    "average_monthly_return_percent": 2.02,
+    "multi_period_returns": {
+      "six_month_percent": 2.60,
+      "one_year_percent": 10.69,
+      "two_year_percent": 37.78
+    },
+    "risk_metrics": {
+      "max_drawdown_percent": -25.00,
+      "profit_factor": 4.10,
+      "reward_to_risk_ratio": 0.89
+    }
+  },
+  "trade_performance": {
+    "total_trades": 28,
+    "win_rate_percent": 82.14,
+    "average_win_inr": 14403.23,
+    "average_loss_inr": -16158.35,
+    "biggest_win_inr": 39172.00,
+    "biggest_loss_inr": -28770.00
+  },
+  "insights": {
+    "most_profitable_trade": {
+      "contract": "BANKNIFTY 26 JUN 48700 CALL",
+      "pnl_inr": 39172.00
+    },
+    "best_month": {
+      "month": "June 2024",
+      "win_rate_percent": 100.00
+    },
+    "current_month_pnl": {
+      "period": "September 2026",
+      "overall_pnl_inr": 8113.50
+    }
+  }
+}
